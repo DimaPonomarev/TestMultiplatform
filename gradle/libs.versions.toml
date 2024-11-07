@@ -1,12 +1,29 @@
 [versions]
+activityCompose = "1.4.0"
 agp = "8.5.0"
+appcompat = "1.7.0"
+composeVersion = "1.1.1"
 kotlin = "2.0.20"
 compose = "1.5.4"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.0"
 foundationLayout = "1.4.1"
+kotlinxCoroutinesCore = "1.6.1-native-mt"
+lifecycleViewmodelCompose = "2.8.7"
+mokoMvvmVersion = "0.13.0"
+ui = "1.1.1"
+uiTooling = "1.1.1"
 
 [libraries]
+androidx-activity-compose-v140 = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-foundation-v111 = { module = "androidx.compose.foundation:foundation", version.ref = "composeVersion" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+androidx-material = { module = "androidx.compose.material:material", version.ref = "composeVersion" }
+androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "composeVersion" }
+androidx-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "composeVersion" }
+androidx-ui-tooling-v111 = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiTooling" }
+androidx-ui-v111 = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
@@ -15,6 +32,10 @@ compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
 androidx-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "foundationLayout" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mokoMvvmVersion" }
+mvvm-flow = { module = "dev.icerock.moko:mvvm-flow", version.ref = "mokoMvvmVersion" }
+mvvm-flow-compose = { module = "dev.icerock.moko:mvvm-flow-compose", version.ref = "mokoMvvmVersion" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

@@ -37,10 +37,10 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1-native-mt")
+                api(libs.kotlinx.coroutines.core)
 
-                api("dev.icerock.moko:mvvm-core:$mokoMvvmVersion")
-                api("dev.icerock.moko:mvvm-flow:$mokoMvvmVersion")
+                api(libs.mvvm.core)
+                api(libs.mvvm.flow)
             }
         }
         commonTest.dependencies {
@@ -48,7 +48,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                api("dev.icerock.moko:mvvm-flow-compose:$mokoMvvmVersion")
+                api(libs.mvvm.flow.compose)
             }
         }
     }

@@ -50,17 +50,17 @@ dependencies {
     implementation(libs.androidx.foundation.layout)
     debugImplementation(libs.compose.ui.tooling)
 
-    implementation("androidx.compose.foundation:foundation:$composeVersion")
-    implementation("androidx.compose.runtime:runtime:$composeVersion")
+    implementation(libs.androidx.foundation.v111)
+    implementation(libs.androidx.runtime)
     // UI
-    implementation("androidx.compose.ui:ui:$composeVersion")
-    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
+    implementation(libs.androidx.ui.v111)
+    implementation(libs.androidx.ui.tooling.v111)
     // Material Design
-    implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.compose.material:material-icons-core:$composeVersion")
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.material.icons.core)
     // Activity
-    implementation("androidx.activity:activity-compose:1.4.0")
-    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation(libs.androidx.activity.compose.v140)
+    implementation(libs.androidx.appcompat)
 
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 }
