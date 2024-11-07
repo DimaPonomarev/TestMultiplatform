@@ -1,7 +1,9 @@
 package com.example.fifth
 
+import dev.icerock.moko.mvvm.flow.CFlow
 import dev.icerock.moko.mvvm.flow.CMutableStateFlow
 import dev.icerock.moko.mvvm.flow.CStateFlow
+import dev.icerock.moko.mvvm.flow.cFlow
 import dev.icerock.moko.mvvm.flow.cMutableStateFlow
 import dev.icerock.moko.mvvm.flow.cStateFlow
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
@@ -29,7 +31,7 @@ class LoginViewModel : ViewModel() {
         }.stateIn(viewModelScope, SharingStarted.Eagerly, false).cStateFlow()
 
     private val _actions = Channel<Action>()
-    val actions: Flow<Action> get() = _actions.receiveAsFlow()
+    val actions: CFlow<Action> get() = _actions.receiveAsFlow().cFlow()
 
     fun onLoginPressed() {
         _isLoading.value = true
