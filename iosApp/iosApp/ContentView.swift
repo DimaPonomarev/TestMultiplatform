@@ -40,6 +40,18 @@ struct LoginScreen: View {
                 ).disabled(!viewModel.state(\.isButtonEnabled))
             }.padding()
         }
+        .alert(
+            "Login successful",
+            isPresented: $isSuccessfulAlertShowed
+        ) {
+            Button("Close", action: { isSuccessfulAlertShowed = false })
+        }
+        .onReceive(createPublisher(viewModel.actions)) { action in
+            if let value = action as? LoginViewModelActionLoginSuccess {
+                isSuccessfulAlertShowed = true
+
+            }
+        }
     }
 }
 

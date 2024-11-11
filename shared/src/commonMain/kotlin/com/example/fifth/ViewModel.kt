@@ -23,7 +23,7 @@ class LoginViewModel : ViewModel() {
     val password: CMutableStateFlow<String> = MutableStateFlow("").cMutableStateFlow()
 
     private val _isLoading: MutableStateFlow<Boolean> = MutableStateFlow(false)
-    val isLoading: CStateFlow<Boolean> = _isLoading.cMutableStateFlow()
+    val isLoading: CStateFlow<Boolean> = _isLoading.cStateFlow()
 
     val isButtonEnabled: CStateFlow<Boolean> =
         combine(isLoading, login, password) { isLoading, login, password ->
