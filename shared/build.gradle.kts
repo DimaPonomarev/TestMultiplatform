@@ -4,8 +4,11 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
+    id("dev.icerock.mobile.multiplatform-resources")
 }
 val mokoMvvmVersion = "0.13.0"
+val mokoResourcesVersion = "0.24.3"
+
 
 kotlin {
     androidTarget {
@@ -41,6 +44,7 @@ kotlin {
 
                 api("dev.icerock.moko:mvvm-core:$mokoMvvmVersion")
                 api("dev.icerock.moko:mvvm-flow:$mokoMvvmVersion")
+                api("dev.icerock.moko:resources:$mokoResourcesVersion")
             }
         }
         commonTest.dependencies {
@@ -52,6 +56,12 @@ kotlin {
             }
         }
     }
+}
+
+// необходимо для добавления mokoResources
+multiplatformResources {
+//    то как будет называться импорт в файлах
+    resourcesPackage.set("com.example.new")
 }
 
 android {

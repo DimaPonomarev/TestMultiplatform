@@ -34,7 +34,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.fifth.LoginViewModel
+import com.example.new.MR
 import dev.icerock.moko.mvvm.flow.compose.observeAsActions
+import dev.icerock.moko.resources.desc.Resource
+import dev.icerock.moko.resources.desc.StringDesc
+import dev.icerock.moko.resources.desc.desc
 import kotlinx.coroutines.launch
 
 @Composable
@@ -73,7 +77,7 @@ fun LoginScreen(
                     .fillMaxWidth(),
                 value = login,
                 enabled = !isLoading,
-                label = { Text(text = "Login") },
+                label = { Text(text = MR.strings.login.desc().toString(context)) },
                 onValueChange = { viewModel.login.value = it }
             )
             TextField(
@@ -82,7 +86,7 @@ fun LoginScreen(
                     .fillMaxWidth(),
                 value = password,
                 enabled = !isLoading,
-                label = { Text(text = "Password") },
+                label = { Text(text = MR.strings.password.desc().toString(context)) },
                 visualTransformation = PasswordVisualTransformation(),
                 onValueChange = { viewModel.password.value = it }
             )
@@ -98,7 +102,7 @@ fun LoginScreen(
                         24.dp
                     )
                 )
-                else Text(text = "Login")
+                else Text(text = MR.strings.log_in.desc().toString(context))
             }
             if (isAlertShown) {
                 AlertDialog(
@@ -108,7 +112,7 @@ fun LoginScreen(
                     onDismissRequest = { viewModel.hideAlert() },
                     text = {
                         Text(
-                            text = "Go to next Screen?",
+                            text = MR.strings.show_next_screen.desc().toString(context),
                             modifier = Modifier
                                 .fillMaxWidth(),
                             textAlign = TextAlign.Center
@@ -127,7 +131,7 @@ fun LoginScreen(
                                 onClick = {
                                     viewModel.hideAlert()
                                 }) {
-                                Text("No")
+                                Text(MR.strings.button_no.desc().toString(context))
                             }
                             Spacer(modifier = Modifier.width(10.dp))
                             Button(
@@ -138,22 +142,13 @@ fun LoginScreen(
                                         viewModel.onShowNextScreen()
                                     }
                                 }) {
-                                Text("Yes")
+                                Text(MR.strings.button_yes.desc().toString(context))
                             }
                         }
                     }
-
                 )
             }
         }
     }
 }
 
-@Preview
-@Composable
-fun DefaultPreview() {
-    val model: LoginViewModel = viewModel()
-//    MyApplicationTheme {
-        LoginScreen(viewModel = model, onAction = {})
-//    }
-}

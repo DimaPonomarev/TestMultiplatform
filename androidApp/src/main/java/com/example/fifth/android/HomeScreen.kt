@@ -24,6 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.example.fifth.HomeViewModel
+import com.example.new.MR
+import dev.icerock.moko.resources.desc.desc
 
 
 @Composable
@@ -56,7 +58,7 @@ fun HomeScreen(
                 modifier = Modifier.fillMaxWidth(),
                 value = login,
                 enabled = !isLoading,
-                label = { Text(text = "Login") },
+                label = { Text(text = MR.strings.login.desc().toString(context)) },
                 onValueChange = { viewModel.login.value = it }
             )
 
@@ -74,7 +76,7 @@ fun HomeScreen(
                         24.dp
                     )
                 )
-                else Text(text = "Go Back")
+                else Text(text = MR.strings.go_back.desc().toString(context))
             }
         }
     }
