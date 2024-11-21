@@ -74,6 +74,10 @@ struct LoginView: View {
             }
         }
     }
+    
+    func tezt() {
+        
+    }
 }
 
 struct LoginScreen_Previews: PreviewProvider {
