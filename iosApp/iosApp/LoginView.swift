@@ -86,6 +86,10 @@ struct LoginView: View {
     func new () {
         
     }
+    
+    func new1() {
+        
+    }
 }
 
 struct LoginScreen_Previews: PreviewProvider {
