@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.fifth.HomeViewModel
 import com.example.new.MR
@@ -58,7 +59,7 @@ fun HomeScreen(
                 modifier = Modifier.fillMaxWidth(),
                 value = login,
                 enabled = !isLoading,
-                label = { Text(text = MR.strings.login.desc().toString(context)) },
+                label = { Text(text = MR.strings.my_string.getString(context)) },
                 onValueChange = { viewModel.login.value = it }
             )
 

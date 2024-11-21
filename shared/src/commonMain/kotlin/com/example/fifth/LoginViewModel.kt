@@ -29,11 +29,11 @@ class LoginViewModel : ViewModel() {
             isLoading.not() && login.isNotBlank() && password.isNotBlank()
         }.stateIn(viewModelScope, SharingStarted.Eagerly, false).cStateFlow()
 
-    private val _isAlertShown = MutableStateFlow(false)
+    val _isAlertShown = MutableStateFlow(false)
     val isAlertShown = _isAlertShown.cMutableStateFlow()
 
-    private val _actions = MutableSharedFlow<Action>(replay = 1) // replay хранит последнее значение
-    val actions: CFlow<Action> get() = _actions.asSharedFlow().cFlow()
+    private val _actions = Channel<Action>() // replay хранит последнее значение
+    val actions: CFlow<Action> get() = _actions.receiveAsFlow().cFlow()
 
     fun onLoginPressed() {
         _isLoading.value = true
@@ -44,8 +44,8 @@ class LoginViewModel : ViewModel() {
         }
     }
 
-    suspend fun onShowNextScreen() {
-        _actions.emit(Action.ShowNext)
+    fun onShowNextScreen() {
+        _actions.trySend(Action.ShowNext)  //для избежания асинхронного вызова
         _isAlertShown.value = false
     }
 

@@ -21,11 +21,11 @@ struct LoginView: View {
         NavigationStack {
             Group {
                 VStack(spacing: 8.0) {
-                    TextField("Login", text: viewModel.binding(\.login))
+                    TextField(MR.strings().login.desc().localized(), text: viewModel.binding(\.login))
                         .textFieldStyle(.roundedBorder)
                         .disabled(viewModel.state(\.isLoading))
                     
-                    SecureField("Password", text: viewModel.binding(\.password))
+                    SecureField(MR.strings().password.desc().localized(), text: viewModel.binding(\.password))
                         .textFieldStyle(.roundedBorder)
                         .disabled(viewModel.state(\.isLoading))
                     
@@ -36,7 +36,7 @@ struct LoginView: View {
                             if viewModel.state(\.isLoading) {
                                 ProgressView()
                             } else {
-                                Text("Login")
+                                Text(MR.strings().log_in.desc().localized())
                             }
                         }
                     ).disabled(!viewModel.state(\.isButtonEnabled))
@@ -48,23 +48,28 @@ struct LoginView: View {
             )
             .alert(
                 "Login successful",
-                isPresented: viewModel.binding(\.isAlertShown)
+                isPresented: $isSuccessfulAlertShowed
             ) {
-                Button("Close", action: {
-                    Task {
-                        do {
-                            try await viewModel.onShowNextScreen()
-                        } catch {
-                            print("mo")
-                        }
+                HStack {
+                    Button(MR.strings().button_no.desc().localized()) {
+                        viewModel.hideAlert()
                     }
-                })
+                    
+                    Button(MR.strings().button_yes.desc().localized()) {
+                        viewModel.onShowNextScreen()
+                        
+                    }
+                }
+            }
+            .task {
+                for await value in viewModel._isAlertShown {
+                    isSuccessfulAlertShowed = value.boolValue
+                }
             }
         }
         .onReceive(createPublisher(viewModel.actions)) { action in
-            print("ko")
-            if let value = action as? LoginViewModelActionShowNext {
-                
+            switch onEnum(of: action) {
+            case .showNext(let asocVal):
                 navigateToHomeScreen = true
             }
         }
