@@ -9,6 +9,7 @@ import dev.icerock.moko.mvvm.flow.cStateFlow
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -19,21 +20,23 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class LoginViewModel : ViewModel() {
-    val login: CMutableStateFlow<String> = MutableStateFlow("").cMutableStateFlow()
-    val password: CMutableStateFlow<String> = MutableStateFlow("").cMutableStateFlow()
+    private val _login: MutableStateFlow<String> = MutableStateFlow("")
+    val login = _login
+
+    private val _password: MutableStateFlow<String> = MutableStateFlow("")
+    val password = _password
 
     private val _isLoading: MutableStateFlow<Boolean> = MutableStateFlow(false)
-    val isLoading: CStateFlow<Boolean> = _isLoading.cStateFlow()
-    val isButtonEnabled: CStateFlow<Boolean> =
-        combine(isLoading, login, password) { isLoading, login, password ->
-            isLoading.not() && login.isNotBlank() && password.isNotBlank()
-        }.stateIn(viewModelScope, SharingStarted.Eagerly, false).cStateFlow()
+    val isLoading = _isLoading
+
+    val _isButtonEnabled: MutableStateFlow<Boolean> = MutableStateFlow(false)
+    val isButtonEnabled = _isButtonEnabled
 
     val _isAlertShown = MutableStateFlow(false)
-    val isAlertShown = _isAlertShown.cMutableStateFlow()
+    val isAlertShown = _isAlertShown
 
     private val _actions = Channel<Action>() // replay хранит последнее значение
-    val actions: CFlow<Action> get() = _actions.receiveAsFlow().cFlow()
+    val actions: Flow<Action> = _actions.receiveAsFlow()
 
     fun onLoginPressed() {
         _isLoading.value = true
@@ -41,6 +44,22 @@ class LoginViewModel : ViewModel() {
             delay(1000)
             _isLoading.value = false
             isAlertShown.value = true
+        }
+    }
+
+     fun setPassword(value: String) {
+        _password.value = value
+         onCheckFields()
+    }
+
+     fun setLogin(value: String) {
+        _login.value = value
+         onCheckFields()
+    }
+
+    private fun onCheckFields() {
+        if (login.value.isNotBlank() && password.value.isNotBlank()) {
+            _isButtonEnabled.value = true
         }
     }
 
