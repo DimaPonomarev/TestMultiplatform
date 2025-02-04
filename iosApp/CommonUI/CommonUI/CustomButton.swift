@@ -18,7 +18,7 @@ public struct CustomButton: View {
         Button {
             action()
         } label: {
-            Text("kol")
+            Text("testButton")
         }
 
     }
