@@ -47,15 +47,12 @@ kotlin {
             dependencies {
                 api(libs.kotlinx.coroutines.core)
 
-<<<<<<< HEAD
                 api(libs.mvvm.core)
                 api(libs.mvvm.flow)
-=======
                 api("dev.icerock.moko:mvvm-core:$mokoMvvmVersion")
                 api("dev.icerock.moko:mvvm-flow:$mokoMvvmVersion")
                 api("dev.icerock.moko:resources:$mokoResourcesVersion") // необходимо для добавления mokoResources
                 api("dev.icerock.moko:resources-compose:$mokoResourcesVersion") // необходимо для добавления mokoResources
->>>>>>> test
             }
         }
         commonTest.dependencies {
