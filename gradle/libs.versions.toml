@@ -38,6 +38,8 @@ mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mokoMvvmVers
 mvvm-flow = { module = "dev.icerock.moko:mvvm-flow", version.ref = "mokoMvvmVersion" }
 mvvm-flow-compose = { module = "dev.icerock.moko:mvvm-flow-compose", version.ref = "mokoMvvmVersion" }
 moko-resources-generator = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-resources" }
+resources = { module = "dev.icerock.moko:resources", version.ref = "moko-resources" }
+resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-resources" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

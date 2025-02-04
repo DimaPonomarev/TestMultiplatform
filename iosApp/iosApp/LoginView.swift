@@ -17,7 +17,7 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             Group {
-                VStack(spacing: 8.0) {
+                LazyVStack(spacing: 8.0) {
                     TextField(MR.strings().login.desc().localized(), text: $viewModel.login)
                         .textFieldStyle(.roundedBorder)
                         .disabled(viewModel.isLoading)
@@ -37,7 +37,10 @@ struct LoginView: View {
                             }
                         }
                     ).disabled(!viewModel.isButtonEnabled)
-                }.padding()
+                }
+                .padding()
+                .frame(maxHeight: .infinity)
+                .background(Color.gray)
             }
             .navigationDestination(
                 isPresented: $viewModel.navigateToHomeScreen,
