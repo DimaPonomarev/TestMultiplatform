@@ -29,10 +29,10 @@ class LoginViewModel : ViewModel() {
     private val _isLoading: MutableStateFlow<Boolean> = MutableStateFlow(false)
     val isLoading = _isLoading
 
-    val _isButtonEnabled: MutableStateFlow<Boolean> = MutableStateFlow(false)
+    private val _isButtonEnabled: MutableStateFlow<Boolean> = MutableStateFlow(false)
     val isButtonEnabled = _isButtonEnabled
 
-    val _isAlertShown = MutableStateFlow(false)
+    private val _isAlertShown = MutableStateFlow(false)
     val isAlertShown = _isAlertShown
 
     private val _actions = Channel<Action>() // replay хранит последнее значение

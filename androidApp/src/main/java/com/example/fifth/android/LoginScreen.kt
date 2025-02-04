@@ -78,7 +78,7 @@ fun LoginScreen(
                 value = login,
                 enabled = !isLoading,
                 label = { Text(text = MR.strings.login.desc().toString(context)) },
-                onValueChange = { viewModel.login.value = it }
+                onValueChange = { viewModel.setLogin(it) }
             )
             TextField(
                 modifier = Modifier
@@ -88,7 +88,7 @@ fun LoginScreen(
                 enabled = !isLoading,
                 label = { Text(text = MR.strings.password.desc().toString(context)) },
                 visualTransformation = PasswordVisualTransformation(),
-                onValueChange = { viewModel.password.value = it }
+                onValueChange = { viewModel.setPassword(it) }
             )
             Button(
                 modifier = Modifier
