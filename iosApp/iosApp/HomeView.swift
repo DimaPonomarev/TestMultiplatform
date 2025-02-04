@@ -1,9 +1,9 @@
 //
-//  LoginScreen.swift
+//  HomeView.swift
 //  iosApp
 //
-//  Created by Aleksey Mikhailov on 30.04.2022.
-//  Copyright © 2022 orgName. All rights reserved.
+//  Created by Дмитрий Пономарев on 11.11.2024.
+//  Copyright © 2024 orgName. All rights reserved.
 //
 
 import SwiftUI
@@ -11,8 +11,10 @@ import MultiPlatformLibrary
 import mokoMvvmFlowSwiftUI
 import Combine
 
-struct LoginScreen: View {
-    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
+struct HomeView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
     
     @State private var isSuccessfulAlertShowed: Bool = false
     
@@ -23,13 +25,9 @@ struct LoginScreen: View {
                     .textFieldStyle(.roundedBorder)
                     .disabled(viewModel.state(\.isLoading))
                 
-                SecureField("Password", text: viewModel.binding(\.password))
-                    .textFieldStyle(.roundedBorder)
-                    .disabled(viewModel.state(\.isLoading))
-                
                 Button(
                     action: {
-                        viewModel.onLoginPressed()
+                        viewModel.goBack()
                     }, label: {
                         if viewModel.state(\.isLoading) {
                             ProgressView()
@@ -40,6 +38,7 @@ struct LoginScreen: View {
                 ).disabled(!viewModel.state(\.isButtonEnabled))
             }.padding()
         }
+<<<<<<< HEAD:iosApp/iosApp/ContentView.swift
         .alert(
             "Login successful",
             isPresented: $isSuccessfulAlertShowed
@@ -50,13 +49,16 @@ struct LoginScreen: View {
         .onReceive(createPublisher(viewModel.actions)) { action in
             if let value = action as? LoginViewModelActionLoginSuccess {
                 isSuccessfulAlertShowed = true
+=======
+        
+        .onReceive(createPublisher(viewModel.actions)) { action in
+            if let value = action as? HomeViewModelActionGoBack {
+                dismiss()
+>>>>>>> test:iosApp/iosApp/HomeView.swift
             }
         }
     }
 }
 
-struct LoginScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginScreen()
-    }
-}
+
+

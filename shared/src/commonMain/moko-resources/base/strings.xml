@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="my_string">My default localization string</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="log_in">Зарегистрироваться</string>
+    <string name="button_yes">Да</string>
+    <string name="button_no">Нет</string>
+    <string name="show_next_screen">Перейти на следующий экран</string>
+    <string name="go_back">Вернуться</string>
+</resources>

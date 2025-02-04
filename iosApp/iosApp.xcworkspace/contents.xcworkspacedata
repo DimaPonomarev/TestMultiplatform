@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "container:Infrastructure/Infrastructure.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CommonUI/CommonUI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:iosApp.xcodeproj">
    </FileRef>
    <FileRef

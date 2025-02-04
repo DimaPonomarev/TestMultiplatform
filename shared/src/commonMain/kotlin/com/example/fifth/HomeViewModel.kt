@@ -18,31 +18,30 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-class LoginViewModel : ViewModel() {
+class HomeViewModel : ViewModel() {
     val login: CMutableStateFlow<String> = MutableStateFlow("").cMutableStateFlow()
-    val password: CMutableStateFlow<String> = MutableStateFlow("").cMutableStateFlow()
 
     private val _isLoading: MutableStateFlow<Boolean> = MutableStateFlow(false)
     val isLoading: CStateFlow<Boolean> = _isLoading.cStateFlow()
 
     val isButtonEnabled: CStateFlow<Boolean> =
-        combine(isLoading, login, password) { isLoading, login, password ->
-            isLoading.not() && login.isNotBlank() && password.isNotBlank()
+        combine(isLoading, login) { isLoading, login ->
+            isLoading.not() && login.isNotBlank()
         }.stateIn(viewModelScope, SharingStarted.Eagerly, false).cStateFlow()
 
     private val _actions = Channel<Action>()
     val actions: CFlow<Action> get() = _actions.receiveAsFlow().cFlow()
 
-    fun onLoginPressed() {
+    fun goBack() {
         _isLoading.value = true
         viewModelScope.launch {
             delay(1000)
             _isLoading.value = false
-            _actions.send(Action.LoginSuccess)
+            _actions.send(Action.GoBack)
         }
     }
 
     sealed interface Action {
-        object LoginSuccess : Action
+        data object GoBack : Action
     }
 }
