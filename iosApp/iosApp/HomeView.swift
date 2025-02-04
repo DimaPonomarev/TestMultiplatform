@@ -38,23 +38,10 @@ struct HomeView: View {
                 ).disabled(!viewModel.state(\.isButtonEnabled))
             }.padding()
         }
-<<<<<<< HEAD:iosApp/iosApp/ContentView.swift
-        .alert(
-            "Login successful",
-            isPresented: $isSuccessfulAlertShowed
-        ) {
-            Button("Close", action: { isSuccessfulAlertShowed = false })
-        }
-        
-        .onReceive(createPublisher(viewModel.actions)) { action in
-            if let value = action as? LoginViewModelActionLoginSuccess {
-                isSuccessfulAlertShowed = true
-=======
         
         .onReceive(createPublisher(viewModel.actions)) { action in
             if let value = action as? HomeViewModelActionGoBack {
                 dismiss()
->>>>>>> test:iosApp/iosApp/HomeView.swift
             }
         }
     }
