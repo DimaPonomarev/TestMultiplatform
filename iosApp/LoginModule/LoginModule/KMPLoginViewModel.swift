@@ -43,7 +43,7 @@ final class KMPLoginViewModel: ViewModelRoot {
 
         instance.actions.subscribe(to: asyncSubscribers) {  action in
             switch onEnum(of: action) {
-            case .showNext(let value): self.navigateToHomeScreen = true
+            case .showNext(let value): Router.shared.moveTo(.home)
             }
         }
     }

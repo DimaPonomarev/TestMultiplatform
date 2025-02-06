@@ -14,11 +14,12 @@
 		322D8D422D549B450070C2FA /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8D402D549B450070C2FA /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		322D8D442D549B4C0070C2FA /* LoginModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8D432D549B4C0070C2FA /* LoginModule.framework */; };
 		322D8D452D549B4C0070C2FA /* LoginModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8D432D549B4C0070C2FA /* LoginModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		322D8E952D54E25F0070C2FA /* HomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8E942D54E25F0070C2FA /* HomeModule.framework */; };
+		322D8E962D54E25F0070C2FA /* HomeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8E942D54E25F0070C2FA /* HomeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3299FCF72D4FF4C400888FE2 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3299FCF62D4FF4C400888FE2 /* CommonUI.framework */; };
 		3299FCF82D4FF4C400888FE2 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3299FCF62D4FF4C400888FE2 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3299FF0D2D5007B200888FE2 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3299FF0C2D5007B200888FE2 /* Infrastructure.framework */; };
 		3299FF0E2D5007B200888FE2 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3299FF0C2D5007B200888FE2 /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		32B64F7D2CE22D5D00778400 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B64F7C2CE22D5D00778400 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 			files = (
 				322D8D452D549B4C0070C2FA /* LoginModule.framework in Embed Frameworks */,
 				322D8D422D549B450070C2FA /* CommonUI.framework in Embed Frameworks */,
+				322D8E962D54E25F0070C2FA /* HomeModule.framework in Embed Frameworks */,
 				3299FF0E2D5007B200888FE2 /* Infrastructure.framework in Embed Frameworks */,
 				3299FCF82D4FF4C400888FE2 /* CommonUI.framework in Embed Frameworks */,
 			);
@@ -54,12 +56,12 @@
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		322D8D402D549B450070C2FA /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		322D8D432D549B4C0070C2FA /* LoginModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoginModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322D8E942D54E25F0070C2FA /* HomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3274BA7C2D536FB0000254AC /* LoginModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoginModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3274BAC02D53B1E9000254AC /* LoginModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoginModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3299010B2D5042DD00888FE2 /* iosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3299FCF62D4FF4C400888FE2 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3299FF0C2D5007B200888FE2 /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		32B64F7C2CE22D5D00778400 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			files = (
 				322D8D442D549B4C0070C2FA /* LoginModule.framework in Frameworks */,
 				322D8D412D549B450070C2FA /* CommonUI.framework in Frameworks */,
+				322D8E952D54E25F0070C2FA /* HomeModule.framework in Frameworks */,
 				3299FF0D2D5007B200888FE2 /* Infrastructure.framework in Frameworks */,
 				3299FCF72D4FF4C400888FE2 /* CommonUI.framework in Frameworks */,
 			);
@@ -133,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
-				32B64F7C2CE22D5D00778400 /* HomeView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
@@ -144,6 +146,7 @@
 		9775E2EE0BAB807AC948B38D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				322D8E942D54E25F0070C2FA /* HomeModule.framework */,
 				322D8D432D549B4C0070C2FA /* LoginModule.framework */,
 				322D8D402D549B450070C2FA /* CommonUI.framework */,
 				3274BAC02D53B1E9000254AC /* LoginModule.framework */,
@@ -265,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B64F7D2CE22D5D00778400 /* HomeView.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,8 +19,9 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
-    val login: MutableStateFlow<String> = MutableStateFlow("")
-
+    private val _login: MutableStateFlow<String> = MutableStateFlow("")
+    val login = _login
+    
     private val _isLoading: MutableStateFlow<Boolean> = MutableStateFlow(false)
     val isLoading = _isLoading
 
