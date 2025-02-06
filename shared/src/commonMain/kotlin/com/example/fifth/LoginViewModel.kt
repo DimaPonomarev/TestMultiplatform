@@ -29,8 +29,8 @@ class LoginViewModel : ViewModel() {
     private val _isAlertShown = MutableStateFlow(false)
     val isAlertShown = _isAlertShown
 
-    private val _actions = Channel<Action>() // replay хранит последнее значение
-    val actions: Flow<Action> = _actions.receiveAsFlow()
+    private val _actions = Channel<LoginViewModelActions>() // replay хранит последнее значение
+    val actions: Flow<LoginViewModelActions> = _actions.receiveAsFlow()
 
     fun onLoginPressed() {
         _isLoading.value = true
@@ -59,7 +59,7 @@ class LoginViewModel : ViewModel() {
 
     fun onShowNextScreen() {
         viewModelScope.launch {
-            _actions.trySend(Action.ShowNext)  //для избежания асинхронного вызова
+            _actions.trySend(LoginViewModelActions.ShowNext)  //для избежания асинхронного вызова
             _isAlertShown.value = false
         }
     }
@@ -68,7 +68,10 @@ class LoginViewModel : ViewModel() {
         _isAlertShown.value = false
     }
 
-    sealed interface Action {
-        data object ShowNext: Action
-    }
+
 }
+
+sealed class LoginViewModelActions: IViewModelActions {
+    data object ShowNext: LoginViewModelActions()
+}
+interface IViewModelActions {}

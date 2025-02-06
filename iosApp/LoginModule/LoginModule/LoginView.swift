@@ -48,10 +48,10 @@ public struct LoginView: View {
                 .frame(maxHeight: .infinity)
                 .background(Color.gray)
             }
-//            .navigationDestination(
-//                isPresented: $viewModel.navigateToHomeScreen,
-//                destination: { HomeView() }
-//            )
+            .navigationDestination(
+                isPresented: $viewModel.navigateToHomeScreen,
+                destination: { Text("lolo") }
+            )
             .onChange(of: viewModel.login) { value in
                 viewModel.instance.setLogin(value: value)
             }

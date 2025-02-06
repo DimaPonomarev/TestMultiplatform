@@ -41,11 +41,11 @@ final class KMPLoginViewModel: ViewModelRoot {
             self.isAlertShown = value.boolValue
         }
 
-//        instance.actions.subscribe(to: asyncSubscribers) {  action in
-//            switch onEnum(of: action) {
-//            case .showNext(let value): self.navigateToHomeScreen = true
-//            }
-//        }
+        instance.actions.subscribe(to: asyncSubscribers) {  action in
+            switch onEnum(of: action) {
+            case .showNext(let value): self.navigateToHomeScreen = true
+            }
+        }
     }
 }
 
