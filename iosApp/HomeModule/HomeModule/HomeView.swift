@@ -24,17 +24,17 @@ public struct HomeView: View {
                 TextField("Login", text: .constant("lp"))
                     .textFieldStyle(.roundedBorder)
 
-//                Button(
-//                    action: {
-//                        viewModel.instance.goBack()
-//                    }, label: {
-//                        if viewModel.isLoading {
-//                            ProgressView()
-//                        } else {
-//                            Text("Login")
-//                        }
-//                    }
-//                )
+                Button(
+                    action: {
+                        viewModel.instance.goBack()
+                    }, label: {
+                        if viewModel.isLoading {
+                            ProgressView()
+                        } else {
+                            Text("Login")
+                        }
+                    }
+                )
             }
             .padding()
         }
@@ -46,27 +46,27 @@ public struct HomeView: View {
 final class KMPHomeViewModel: ViewModelRoot {
     private(set) var instance: HomeViewModel = HomeViewModel()
 
-//    @Published var login: String = ""
-//    @Published var isLoading: Bool = false
+    @Published var login: String = ""
+    @Published var isLoading: Bool = false
 
 
-//    override init() {
-//        super.init()
-//        bindValues()
-//    }
+    override init() {
+        super.init()
+        bindValues()
+    }
 
-//    override func bindValues() {
-//        instance.login.subscribe(to: asyncSubscribers) { value in
-//            self.login = value
-//        }
-//        instance.isLoading.subscribe(to: asyncSubscribers) { value in
-//            self.isLoading = value.boolValue
-//        }
+    override func bindValues() {
+        instance.login.subscribe(to: asyncSubscribers) { value in
+            self.login = value
+        }
+        instance.isLoading.subscribe(to: asyncSubscribers) { value in
+            self.isLoading = value.boolValue
+        }
 
 //        instance.actions.subscribe(to: asyncSubscribers) { [weak self] action in
 //            switch onEnum(of: action) {
-//            case .showNext(let value): self?.navigateToHomeScreen = true
+//            case .showNext(let value): Router.shared.moveBackTo(.login)
 //            }
 //        }
-//    }
+    }
 }

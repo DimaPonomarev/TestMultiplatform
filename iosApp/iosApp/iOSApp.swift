@@ -2,8 +2,7 @@ import SwiftUI
 //import mokoMvvmFlowSwiftUI
 //import MultiPlatformLibrary
 
-import HomeModule
-import LoginModule
+import MainModule
 import Infrastructure
 
 @main
@@ -14,7 +13,7 @@ struct iOSApp: App {
     var body: some Scene {
 		WindowGroup {
             Group {
-                LoginView()
+                MainView()
                     .environmentObject(router)
             }
 		}

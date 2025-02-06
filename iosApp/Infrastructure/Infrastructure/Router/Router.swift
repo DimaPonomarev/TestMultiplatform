@@ -12,7 +12,7 @@ import Combine
 public final class Router: ObservableObject {
     public static let shared = Router()
 //    @Published public var rootRoute: Route = .splash
-    @Published public var mainRoute: Route = .main
+    @Published public var mainRoute: Route = .login
     @Published public var routes: [Route] = []
     @Published public var isUserAuthorized: Bool = false
     @Published public var menuXOffset: CGFloat = -400

@@ -7,72 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		322D8D3A2D549B2D0070C2FA /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8D392D549B2D0070C2FA /* Infrastructure.framework */; };
-		322D8D3E2D549B320070C2FA /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8D3D2D549B320070C2FA /* CommonUI.framework */; };
+		322D90D52D54F1A90070C2FA /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322D90D42D54F1A90070C2FA /* CommonUI.framework */; };
+		322D90D92D54F1AC0070C2FA /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322D90D82D54F1AC0070C2FA /* Infrastructure.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		322D8D0F2D5499690070C2FA /* LoginModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoginModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		322D8D392D549B2D0070C2FA /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		322D8D3D2D549B320070C2FA /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322D90992D54F17E0070C2FA /* MainModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MainModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322D90D42D54F1A90070C2FA /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322D90D82D54F1AC0070C2FA /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		322D8D162D5499690070C2FA /* Exceptions for "LoginModule" folder in "LoginModule" target */ = {
+		322D90A02D54F17E0070C2FA /* Exceptions for "MainModule" folder in "MainModule" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
-				LoginModule.h,
+				MainModule.h,
 			);
-			target = 322D8D0E2D5499690070C2FA /* LoginModule */;
+			target = 322D90982D54F17E0070C2FA /* MainModule */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		322D8D112D5499690070C2FA /* LoginModule */ = {
+		322D909B2D54F17E0070C2FA /* MainModule */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				322D8D162D5499690070C2FA /* Exceptions for "LoginModule" folder in "LoginModule" target */,
+				322D90A02D54F17E0070C2FA /* Exceptions for "MainModule" folder in "MainModule" target */,
 			);
-			path = LoginModule;
+			path = MainModule;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		322D8D0C2D5499690070C2FA /* Frameworks */ = {
+		322D90962D54F17E0070C2FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322D8D3A2D549B2D0070C2FA /* Infrastructure.framework in Frameworks */,
-				322D8D3E2D549B320070C2FA /* CommonUI.framework in Frameworks */,
+				322D90D52D54F1A90070C2FA /* CommonUI.framework in Frameworks */,
+				322D90D92D54F1AC0070C2FA /* Infrastructure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		322D8D052D5499690070C2FA = {
+		322D908F2D54F17E0070C2FA = {
 			isa = PBXGroup;
 			children = (
-				322D8D112D5499690070C2FA /* LoginModule */,
-				322D8D382D549B2D0070C2FA /* Frameworks */,
-				322D8D102D5499690070C2FA /* Products */,
+				322D909B2D54F17E0070C2FA /* MainModule */,
+				322D90D32D54F1A90070C2FA /* Frameworks */,
+				322D909A2D54F17E0070C2FA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		322D8D102D5499690070C2FA /* Products */ = {
+		322D909A2D54F17E0070C2FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				322D8D0F2D5499690070C2FA /* LoginModule.framework */,
+				322D90992D54F17E0070C2FA /* MainModule.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		322D8D382D549B2D0070C2FA /* Frameworks */ = {
+		322D90D32D54F1A90070C2FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				322D8D3D2D549B320070C2FA /* CommonUI.framework */,
-				322D8D392D549B2D0070C2FA /* Infrastructure.framework */,
+				322D90D82D54F1AC0070C2FA /* Infrastructure.framework */,
+				322D90D42D54F1A90070C2FA /* CommonUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,7 +80,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		322D8D0A2D5499690070C2FA /* Headers */ = {
+		322D90942D54F17E0070C2FA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,64 +90,64 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		322D8D0E2D5499690070C2FA /* LoginModule */ = {
+		322D90982D54F17E0070C2FA /* MainModule */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 322D8D172D5499690070C2FA /* Build configuration list for PBXNativeTarget "LoginModule" */;
+			buildConfigurationList = 322D90A12D54F17E0070C2FA /* Build configuration list for PBXNativeTarget "MainModule" */;
 			buildPhases = (
-				322D8D0A2D5499690070C2FA /* Headers */,
-				322D8D0B2D5499690070C2FA /* Sources */,
-				322D8D0C2D5499690070C2FA /* Frameworks */,
-				322D8D0D2D5499690070C2FA /* Resources */,
+				322D90942D54F17E0070C2FA /* Headers */,
+				322D90952D54F17E0070C2FA /* Sources */,
+				322D90962D54F17E0070C2FA /* Frameworks */,
+				322D90972D54F17E0070C2FA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				322D8D112D5499690070C2FA /* LoginModule */,
+				322D909B2D54F17E0070C2FA /* MainModule */,
 			);
-			name = LoginModule;
+			name = MainModule;
 			packageProductDependencies = (
 			);
-			productName = LoginModule;
-			productReference = 322D8D0F2D5499690070C2FA /* LoginModule.framework */;
+			productName = MainModule;
+			productReference = 322D90992D54F17E0070C2FA /* MainModule.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		322D8D062D5499690070C2FA /* Project object */ = {
+		322D90902D54F17E0070C2FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					322D8D0E2D5499690070C2FA = {
+					322D90982D54F17E0070C2FA = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 322D8D092D5499690070C2FA /* Build configuration list for PBXProject "LoginModule" */;
+			buildConfigurationList = 322D90932D54F17E0070C2FA /* Build configuration list for PBXProject "MainModule" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 322D8D052D5499690070C2FA;
+			mainGroup = 322D908F2D54F17E0070C2FA;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 322D8D102D5499690070C2FA /* Products */;
+			productRefGroup = 322D909A2D54F17E0070C2FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				322D8D0E2D5499690070C2FA /* LoginModule */,
+				322D90982D54F17E0070C2FA /* MainModule */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		322D8D0D2D5499690070C2FA /* Resources */ = {
+		322D90972D54F17E0070C2FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -157,7 +157,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		322D8D0B2D5499690070C2FA /* Sources */ = {
+		322D90952D54F17E0070C2FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -167,7 +167,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		322D8D182D5499690070C2FA /* Debug */ = {
+		322D90A22D54F17E0070C2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -182,7 +182,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -191,7 +190,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = new.LoginModule;
+				PRODUCT_BUNDLE_IDENTIFIER = new.MainModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -201,7 +200,7 @@
 			};
 			name = Debug;
 		};
-		322D8D192D5499690070C2FA /* Release */ = {
+		322D90A32D54F17E0070C2FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -216,7 +215,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -225,7 +223,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = new.LoginModule;
+				PRODUCT_BUNDLE_IDENTIFIER = new.MainModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -235,7 +233,7 @@
 			};
 			name = Release;
 		};
-		322D8D1A2D5499690070C2FA /* Debug */ = {
+		322D90A42D54F17E0070C2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -301,7 +299,7 @@
 			};
 			name = Debug;
 		};
-		322D8D1B2D5499690070C2FA /* Release */ = {
+		322D90A52D54F17E0070C2FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -363,25 +361,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		322D8D092D5499690070C2FA /* Build configuration list for PBXProject "LoginModule" */ = {
+		322D90932D54F17E0070C2FA /* Build configuration list for PBXProject "MainModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				322D8D1A2D5499690070C2FA /* Debug */,
-				322D8D1B2D5499690070C2FA /* Release */,
+				322D90A42D54F17E0070C2FA /* Debug */,
+				322D90A52D54F17E0070C2FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		322D8D172D5499690070C2FA /* Build configuration list for PBXNativeTarget "LoginModule" */ = {
+		322D90A12D54F17E0070C2FA /* Build configuration list for PBXNativeTarget "MainModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				322D8D182D5499690070C2FA /* Debug */,
-				322D8D192D5499690070C2FA /* Release */,
+				322D90A22D54F17E0070C2FA /* Debug */,
+				322D90A32D54F17E0070C2FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 322D8D062D5499690070C2FA /* Project object */;
+	rootObject = 322D90902D54F17E0070C2FA /* Project object */;
 }
