@@ -19,18 +19,13 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
-    val login: CMutableStateFlow<String> = MutableStateFlow("").cMutableStateFlow()
+    val login: MutableStateFlow<String> = MutableStateFlow("")
 
     private val _isLoading: MutableStateFlow<Boolean> = MutableStateFlow(false)
-    val isLoading: CStateFlow<Boolean> = _isLoading.cStateFlow()
-
-    val isButtonEnabled: CStateFlow<Boolean> =
-        combine(isLoading, login) { isLoading, login ->
-            isLoading.not() && login.isNotBlank()
-        }.stateIn(viewModelScope, SharingStarted.Eagerly, false).cStateFlow()
+    val isLoading = _isLoading
 
     private val _actions = Channel<Action>()
-    val actions: CFlow<Action> get() = _actions.receiveAsFlow().cFlow()
+    val actions = _actions
 
     fun goBack() {
         _isLoading.value = true

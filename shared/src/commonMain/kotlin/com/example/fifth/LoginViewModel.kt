@@ -1,11 +1,5 @@
 package com.example.fifth
 
-import dev.icerock.moko.mvvm.flow.CFlow
-import dev.icerock.moko.mvvm.flow.CMutableStateFlow
-import dev.icerock.moko.mvvm.flow.CStateFlow
-import dev.icerock.moko.mvvm.flow.cFlow
-import dev.icerock.moko.mvvm.flow.cMutableStateFlow
-import dev.icerock.moko.mvvm.flow.cStateFlow
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
@@ -64,8 +58,10 @@ class LoginViewModel : ViewModel() {
     }
 
     fun onShowNextScreen() {
-        _actions.trySend(Action.ShowNext)  //для избежания асинхронного вызова
-        _isAlertShown.value = false
+        viewModelScope.launch {
+            _actions.trySend(Action.ShowNext)  //для избежания асинхронного вызова
+            _isAlertShown.value = false
+        }
     }
 
     fun hideAlert() {

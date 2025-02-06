@@ -6,72 +6,81 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		322D8D3A2D549B2D0070C2FA /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8D392D549B2D0070C2FA /* Infrastructure.framework */; };
+		322D8D3E2D549B320070C2FA /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322D8D3D2D549B320070C2FA /* CommonUI.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		3274BA5A2D536E67000254AC /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3299FEF32D50072000888FE2 /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322D8D0F2D5499690070C2FA /* LoginModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoginModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322D8D392D549B2D0070C2FA /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322D8D3D2D549B320070C2FA /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3299FEFA2D50072000888FE2 /* Exceptions for "Infrastructure" folder in "Infrastructure" target */ = {
+		322D8D162D5499690070C2FA /* Exceptions for "LoginModule" folder in "LoginModule" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
-				Infrastructure.h,
+				LoginModule.h,
 			);
-			target = 3299FEF22D50072000888FE2 /* Infrastructure */;
+			target = 322D8D0E2D5499690070C2FA /* LoginModule */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3299FEF52D50072000888FE2 /* Infrastructure */ = {
+		322D8D112D5499690070C2FA /* LoginModule */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				3299FEFA2D50072000888FE2 /* Exceptions for "Infrastructure" folder in "Infrastructure" target */,
+				322D8D162D5499690070C2FA /* Exceptions for "LoginModule" folder in "LoginModule" target */,
 			);
-			path = Infrastructure;
+			path = LoginModule;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3299FEF02D50072000888FE2 /* Frameworks */ = {
+		322D8D0C2D5499690070C2FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322D8D3A2D549B2D0070C2FA /* Infrastructure.framework in Frameworks */,
+				322D8D3E2D549B320070C2FA /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3274BA592D536E67000254AC /* Frameworks */ = {
+		322D8D052D5499690070C2FA = {
 			isa = PBXGroup;
 			children = (
-				3274BA5A2D536E67000254AC /* Pods_iosApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3299FEE92D50072000888FE2 = {
-			isa = PBXGroup;
-			children = (
-				3299FEF52D50072000888FE2 /* Infrastructure */,
-				3274BA592D536E67000254AC /* Frameworks */,
-				3299FEF42D50072000888FE2 /* Products */,
+				322D8D112D5499690070C2FA /* LoginModule */,
+				322D8D382D549B2D0070C2FA /* Frameworks */,
+				322D8D102D5499690070C2FA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3299FEF42D50072000888FE2 /* Products */ = {
+		322D8D102D5499690070C2FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3299FEF32D50072000888FE2 /* Infrastructure.framework */,
+				322D8D0F2D5499690070C2FA /* LoginModule.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		322D8D382D549B2D0070C2FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				322D8D3D2D549B320070C2FA /* CommonUI.framework */,
+				322D8D392D549B2D0070C2FA /* Infrastructure.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3299FEEE2D50072000888FE2 /* Headers */ = {
+		322D8D0A2D5499690070C2FA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,66 +90,64 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3299FEF22D50072000888FE2 /* Infrastructure */ = {
+		322D8D0E2D5499690070C2FA /* LoginModule */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3299FEFB2D50072000888FE2 /* Build configuration list for PBXNativeTarget "Infrastructure" */;
+			buildConfigurationList = 322D8D172D5499690070C2FA /* Build configuration list for PBXNativeTarget "LoginModule" */;
 			buildPhases = (
-				3299FEEE2D50072000888FE2 /* Headers */,
-				3299FEEF2D50072000888FE2 /* Sources */,
-				3299FEF02D50072000888FE2 /* Frameworks */,
-				3299FEF12D50072000888FE2 /* Resources */,
-				3274BA822D538EC5000254AC /* Run Script --Generated Moko Res */,
-				3274BABF2D5399D2000254AC /* Run Script --Generate shared */,
+				322D8D0A2D5499690070C2FA /* Headers */,
+				322D8D0B2D5499690070C2FA /* Sources */,
+				322D8D0C2D5499690070C2FA /* Frameworks */,
+				322D8D0D2D5499690070C2FA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3299FEF52D50072000888FE2 /* Infrastructure */,
+				322D8D112D5499690070C2FA /* LoginModule */,
 			);
-			name = Infrastructure;
+			name = LoginModule;
 			packageProductDependencies = (
 			);
-			productName = Infrastructure;
-			productReference = 3299FEF32D50072000888FE2 /* Infrastructure.framework */;
+			productName = LoginModule;
+			productReference = 322D8D0F2D5499690070C2FA /* LoginModule.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3299FEEA2D50072000888FE2 /* Project object */ = {
+		322D8D062D5499690070C2FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					3299FEF22D50072000888FE2 = {
+					322D8D0E2D5499690070C2FA = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 3299FEED2D50072000888FE2 /* Build configuration list for PBXProject "Infrastructure" */;
+			buildConfigurationList = 322D8D092D5499690070C2FA /* Build configuration list for PBXProject "LoginModule" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 3299FEE92D50072000888FE2;
+			mainGroup = 322D8D052D5499690070C2FA;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 3299FEF42D50072000888FE2 /* Products */;
+			productRefGroup = 322D8D102D5499690070C2FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3299FEF22D50072000888FE2 /* Infrastructure */,
+				322D8D0E2D5499690070C2FA /* LoginModule */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3299FEF12D50072000888FE2 /* Resources */ = {
+		322D8D0D2D5499690070C2FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -149,49 +156,8 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3274BA822D538EC5000254AC /* Run Script --Generated Moko Res */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script --Generated Moko Res";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/../../gradlew\" -p \"$SRCROOT/../../\" :shared:copyFrameworkResourcesToApp \\\n    -Pmoko.resources.PLATFORM_NAME=\"$PLATFORM_NAME\" \\\n    -Pmoko.resources.CONFIGURATION=\"$CONFIGURATION\" \\\n    -Pmoko.resources.ARCHS=\"$ARCHS\" \\\n    -Pmoko.resources.BUILT_PRODUCTS_DIR=\"$BUILT_PRODUCTS_DIR\" \\\n    -Pmoko.resources.CONTENTS_FOLDER_PATH=\"$CONTENTS_FOLDER_PATH\" \n";
-		};
-		3274BABF2D5399D2000254AC /* Run Script --Generate shared */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script --Generate shared";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/../..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		3299FEEF2D50072000888FE2 /* Sources */ = {
+		322D8D0B2D5499690070C2FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -201,7 +167,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3299FEFC2D50072000888FE2 /* Debug */ = {
+		322D8D182D5499690070C2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -213,21 +179,18 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.test.Infrastructure;
+				PRODUCT_BUNDLE_IDENTIFIER = new.LoginModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -237,7 +200,7 @@
 			};
 			name = Debug;
 		};
-		3299FEFD2D50072000888FE2 /* Release */ = {
+		322D8D192D5499690070C2FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -249,21 +212,18 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.test.Infrastructure;
+				PRODUCT_BUNDLE_IDENTIFIER = new.LoginModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -273,7 +233,7 @@
 			};
 			name = Release;
 		};
-		3299FEFE2D50072000888FE2 /* Debug */ = {
+		322D8D1A2D5499690070C2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -339,7 +299,7 @@
 			};
 			name = Debug;
 		};
-		3299FEFF2D50072000888FE2 /* Release */ = {
+		322D8D1B2D5499690070C2FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -401,25 +361,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3299FEED2D50072000888FE2 /* Build configuration list for PBXProject "Infrastructure" */ = {
+		322D8D092D5499690070C2FA /* Build configuration list for PBXProject "LoginModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3299FEFE2D50072000888FE2 /* Debug */,
-				3299FEFF2D50072000888FE2 /* Release */,
+				322D8D1A2D5499690070C2FA /* Debug */,
+				322D8D1B2D5499690070C2FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3299FEFB2D50072000888FE2 /* Build configuration list for PBXNativeTarget "Infrastructure" */ = {
+		322D8D172D5499690070C2FA /* Build configuration list for PBXNativeTarget "LoginModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3299FEFC2D50072000888FE2 /* Debug */,
-				3299FEFD2D50072000888FE2 /* Release */,
+				322D8D182D5499690070C2FA /* Debug */,
+				322D8D192D5499690070C2FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3299FEEA2D50072000888FE2 /* Project object */;
+	rootObject = 322D8D062D5499690070C2FA /* Project object */;
 }

@@ -34,12 +34,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.fifth.LoginViewModel
-import com.example.new.MR
+
 import dev.icerock.moko.mvvm.flow.compose.observeAsActions
 import dev.icerock.moko.resources.desc.Resource
 import dev.icerock.moko.resources.desc.StringDesc
 import dev.icerock.moko.resources.desc.desc
 import kotlinx.coroutines.launch
+import ru.test.MR
 
 @Composable
 fun LoginScreen(

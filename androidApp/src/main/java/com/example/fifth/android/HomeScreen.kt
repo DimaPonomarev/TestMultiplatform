@@ -25,8 +25,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.fifth.HomeViewModel
-import com.example.new.MR
 import dev.icerock.moko.resources.desc.desc
+import ru.test.MR
 
 
 @Composable
@@ -38,13 +38,12 @@ fun HomeScreen(
 
     val login: String by viewModel.login.collectAsState()
     val isLoading: Boolean by viewModel.isLoading.collectAsState()
-    val isLoginButtonEnabled: Boolean by viewModel.isButtonEnabled.collectAsState()
-
-    LaunchedEffect(viewModel.actions) {
-        viewModel.actions.collect { action ->
-            onAction(action)
-        }
-    }
+//
+//    LaunchedEffect(viewModel.actions) {
+//        viewModel.actions.collect { action ->
+//            onAction(action)
+//        }
+//    }
 
     Box(
         modifier = Modifier
@@ -69,7 +68,7 @@ fun HomeScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(48.dp),
-                enabled = isLoginButtonEnabled,
+                enabled = true,
                 onClick = viewModel::goBack
             ) {
                 if (isLoading) CircularProgressIndicator(

@@ -17,10 +17,8 @@ class HomeActivity: ComponentActivity() {
         setContent {
             HomeScreen(
                 viewModel = homeViewModel,
-                onAction = { action -> handleAction(action)
-                }
+                onAction = { action -> handleAction(action) }
             )
-
         }
     }
 

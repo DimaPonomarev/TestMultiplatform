@@ -4,8 +4,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.kotlinCocoapods) // добавление cocoaPods
     alias(libs.plugins.androidLibrary)
+
     id("dev.icerock.mobile.multiplatform-resources") // необходимо для добавления mokoResources
     id("co.touchlab.skie") version "0.9.3"
 }
@@ -23,19 +23,15 @@ kotlin {
             }
         }
     }
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
 
+    val iosTargets = listOf(iosX64(), iosArm64(), iosSimulatorArm64())
+    iosTargets.forEach {
+        it.binaries.framework() {
+            baseName = "multi"
+            isStatic = true
 
-    cocoapods {
-        summary = "Some description for the Shared Module"
-        homepage = "Link to the Shared Module homepage"
-        version = "1.0"
-        ios.deploymentTarget = "16.0"
-        podfile = project.file("../iosApp/Podfile")
-        framework {
-            baseName = "MultiPlatformLibrary" //    то как будет называться импорт в файлах
+            linkerOpts.add("-lsqlite3")
+            linkerOpts.add("-ld64")
             export(libs.resources)  // необходимо для добавления mokoResources
             export(libs.mvvm.core)  // необходимо для добавления moko-MVVM
             export(libs.mvvm.flow)  // необходимо для добавления moko-MVVM
@@ -59,6 +55,8 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 api(libs.mvvm.flow.compose)
+                api(libs.androidx.lifecycle.viewmodel.android)
+
             }
         }
     }
@@ -67,7 +65,7 @@ kotlin {
 // необходимо для добавления mokoResources
 multiplatformResources {
     iosBaseLocalizationRegion = "ru"
-    resourcesPackage.set("com.example.new")
+    resourcesPackage.set("ru.test")
 }
 
 android {
@@ -80,4 +78,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+}
+dependencies {
+    implementation(libs.androidx.lifecycle.viewmodel.android)
 }
