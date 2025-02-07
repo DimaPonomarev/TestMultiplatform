@@ -12,6 +12,7 @@ import Infrastructure
 final class KMPLoginViewModel: ViewModelRoot {
     private(set) var instance: LoginViewModel = LoginViewModel()
 
+    
     @Published var login: String = ""
     @Published var password: String = ""
     @Published var isLoading: Bool = false

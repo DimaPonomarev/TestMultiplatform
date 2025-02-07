@@ -14,7 +14,7 @@ struct iOSApp: App {
     var body: some Scene {
 		WindowGroup {
             Group {
-                LoginView()
+                MainView()
                     .environmentObject(router)
             }
 		}

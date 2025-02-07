@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-class LoginViewModel : ViewModel() {
+class LoginViewModel: RootViewModel<LoginViewModelActions>() {
     private val _login: MutableStateFlow<String> = MutableStateFlow("")
     val login = _login
 
@@ -28,9 +28,6 @@ class LoginViewModel : ViewModel() {
 
     private val _isAlertShown = MutableStateFlow(false)
     val isAlertShown = _isAlertShown
-
-    private val _actions = Channel<LoginViewModelActions>() // replay хранит последнее значение
-    val actions: Flow<LoginViewModelActions> = _actions.receiveAsFlow()
 
     fun onLoginPressed() {
         _isLoading.value = true
@@ -59,7 +56,7 @@ class LoginViewModel : ViewModel() {
 
     fun onShowNextScreen() {
         viewModelScope.launch {
-            _actions.trySend(LoginViewModelActions.ShowNext)  //для избежания асинхронного вызова
+            LoginViewModelActions.ShowNext.sendAction()
             _isAlertShown.value = false
         }
     }

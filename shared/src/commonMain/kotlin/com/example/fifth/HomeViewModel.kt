@@ -18,26 +18,24 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-class HomeViewModel : ViewModel() {
+class HomeViewModel: RootViewModel<HomeViewModelActions>() {
     private val _login: MutableStateFlow<String> = MutableStateFlow("")
     val login = _login
     
     private val _isLoading: MutableStateFlow<Boolean> = MutableStateFlow(false)
     val isLoading = _isLoading
 
-    private val _actions = Channel<Action>()
-    val actions = _actions
-
     fun goBack() {
         _isLoading.value = true
         viewModelScope.launch {
             delay(1000)
             _isLoading.value = false
-            _actions.send(Action.GoBack)
+            HomeViewModelActions.GoBack.sendAction()
         }
     }
 
-    sealed interface Action {
-        data object GoBack : Action
-    }
+}
+
+sealed class HomeViewModelActions: IViewModelActions {
+    data object GoBack: HomeViewModelActions()
 }

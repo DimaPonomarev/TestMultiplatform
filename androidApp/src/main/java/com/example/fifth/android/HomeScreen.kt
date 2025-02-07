@@ -25,6 +25,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.fifth.HomeViewModel
+import com.example.fifth.HomeViewModelActions
 import dev.icerock.moko.resources.desc.desc
 import ru.test.MR
 
@@ -32,7 +33,7 @@ import ru.test.MR
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel,
-    onAction: (HomeViewModel.Action) -> Unit
+    onAction: (HomeViewModelActions) -> Unit
 ) {
     val context: Context = LocalContext.current
 

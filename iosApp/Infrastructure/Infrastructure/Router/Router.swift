@@ -11,8 +11,7 @@ import Combine
 @MainActor
 public final class Router: ObservableObject {
     public static let shared = Router()
-//    @Published public var rootRoute: Route = .splash
-    @Published public var mainRoute: Route = .main
+    @Published public var mainRoute: Route = .login
     @Published public var routes: [Route] = []
     @Published public var isUserAuthorized: Bool = false
     @Published public var menuXOffset: CGFloat = -400
@@ -20,7 +19,7 @@ public final class Router: ObservableObject {
     public func moveTo(_ route: Route) {
         guard route != routes.last else { return }
         routes.append(route)
-        if route == .main {
+        if route == .description {
             routes.removeAll { $0 != route }
         }
     }

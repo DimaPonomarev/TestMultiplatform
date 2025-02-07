@@ -10,62 +10,14 @@ import Infrastructure
 import CommonUI
 import HomeModule
 
+
 public struct LoginView: View {
-    @EnvironmentObject private var router: Router
+    
+    @StateObject var viewModel = KMPLoginViewModel()
     
     public init() {}
     
     public var body: some View {
-        NavigationStack(path: $router.routes) {
-            NavigationStack(path: $router.routes) {
-                Group {
-                    router.destanation(for: router.mainRoute)
-                }
-                .navigationDestination(for: Route.self, destination: { route in
-                    router.destanation(for: route)
-                })
-            }
-        }
-    }
-}
-    
-    
-struct LoginScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
-    
-    
-    
-    
-    
-extension Router {
-    @ViewBuilder
-    func destanation(for route: Route) -> some View {
-        switch route {
-        case .login:
-            LoginView()
-        case .main:
-            MainView()
-        case .home:
-            HomeView()
-            
-        @unknown default:
-            fatalError("No screen")
-        }
-    }
-}
-    
-    
-    
-    
-    
-struct MainView: View {
-    
-    @StateObject var viewModel = KMPLoginViewModel()
-    
-    var body: some View {
         LazyVStack(spacing: 8.0) {
             CustomTextField(
                 isDisabled: $viewModel.isLoading,

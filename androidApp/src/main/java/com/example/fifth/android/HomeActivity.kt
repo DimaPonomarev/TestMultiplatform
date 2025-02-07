@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import com.example.fifth.HomeViewModel
+import com.example.fifth.HomeViewModelActions
 import com.example.fifth.LoginViewModel
 
 class HomeActivity: ComponentActivity() {
@@ -22,9 +23,9 @@ class HomeActivity: ComponentActivity() {
         }
     }
 
-    private fun handleAction(action: HomeViewModel.Action) {
+    private fun handleAction(action: HomeViewModelActions) {
         when (action) {
-            HomeViewModel.Action.GoBack -> {
+            HomeViewModelActions.GoBack -> {
                 finish()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)

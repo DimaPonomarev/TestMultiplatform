@@ -42,6 +42,6 @@ extension ComplexEquatable {
 // MARK: - Routes
 public enum Route: ComplexEquatable {
     case login
-    case main
     case home
+    case description
 }
